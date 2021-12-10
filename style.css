@@ -1,0 +1,117 @@
+:root {
+    --bg: #1F2937;
+    --big-colour: #F9FAF8;
+    --sec-text-color: #E5E7EB;
+    --darkish-color: #1F2937;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 1px solid red;
+}
+
+nav {
+    background-color: var(--bg);
+    padding: 15px 0;
+}
+
+.nav-container {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo {
+    color: var(--big-colour);
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.nav-links {
+    display: flex;
+}
+
+ul {
+    list-style-type: none;    
+}
+
+li {
+    margin: 15px;
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--sec-text-color);
+}
+
+/* ---------------------------section------------------------ */
+section {
+    height: 600px;
+}
+
+/* ----------------------------main-------------------------- */
+.main-section {
+    display: flex;  
+    background-color: var(--bg);
+}
+
+.main-container {
+    width: 50%;
+    height: 100%;
+    position: relative;
+}
+
+#left-text-wrapper {
+    max-width: 650px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    right: 0;
+}
+
+#main-text {
+    font-size: 48px;
+    font-style: extra-bold;
+    color: var(--big-colour);
+}
+
+#main-sec-text {
+    font-size: 18px;
+    color: var(--sec-text-color);
+    margin: 0 0 10px 0;
+}
+
+#main-sign-up {
+    background-color: #3882F6;
+    color: var(--big-colour);
+    font-size: 20px;
+    font-weight: bold;
+    border: 0;
+    width: 170px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#main-sign-up:hover {
+    background-color: var(--sec-text-color);
+    color: #3882F6;
+    transition-duration: 0.4s;
+}
+
+#main-img {
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 150px;
+    left: 0;
+}
+
+/* -------------------------features----------------------- */
+
+
+

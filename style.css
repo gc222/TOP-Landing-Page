@@ -8,8 +8,23 @@
 * {
     margin: 0;
     box-sizing: border-box;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    border: 1px solid red;
+    font-family: Roboto, sans-serif;
+    /* border: 1px solid red; */
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 900;
+    src: url(Roboto/Roboto-Bold.ttf);
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 300;
+    src: url(Roboto/Roboto-Light.ttf);
 }
 
 nav {
@@ -17,6 +32,7 @@ nav {
     padding: 15px 0;
 }
 
+/* ---------------------------nav------------------------ */
 .nav-container {
     width: 70%;
     margin: auto;
@@ -27,6 +43,7 @@ nav {
 .logo {
     color: var(--big-colour);
     font-size: 24px;
+    font-weight: 900;
     margin: 10px 0;
 }
 
@@ -75,7 +92,7 @@ section {
 
 #main-text {
     font-size: 48px;
-    font-style: extra-bold;
+    font-weight: 900;
     color: var(--big-colour);
 }
 
@@ -91,8 +108,8 @@ section {
     font-size: 20px;
     font-weight: bold;
     border: 0;
-    width: 170px;
-    height: 50px;
+    width: 140px;
+    height: 40px;
     border-radius: 10px;
     cursor: pointer;
 }
@@ -113,5 +130,154 @@ section {
 
 /* -------------------------features----------------------- */
 
+#features-h1 {
+    text-align: center;
+    padding: 50px;
+    font-size: 36px;
+    color: var(--darkish-color);
+}
+
+#features-container {
+    width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 330px);
+    grid-gap: 50px;
+}
+
+/* max-width should be bigger than the grid-template-columns
+given width (1fr = 250px ish) so it fills up the area but wouldn't
+exceed this width*/
+.card {
+    max-width: 300px;
+    box-shadow: 0 2px 6px rgba(58, 57, 68, 0.2);
+    border-radius: 20px;
+}
+
+/* 100% width inherits  */
+.card-img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+    border: 5px solid #3882F6;
+    border-radius: 20px;
+}
+
+.img-text {
+    font-size: 20px;
+    color: rgb(77, 74, 74);
+    text-align: center;
+}
+
+/* ----------------------quote section--------------------- */
+#quote-section {
+    background-color: var(--sec-text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#quote-wrapper {
+    width: 55%;
+    height: 220px;
+}
+
+#quote {
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 300;
+    color: var(--darkish-color);
+}
+
+#quote-from {
+    text-align: right;
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+/* ------------------------newsletter----------------------- */
+#newsletter-section {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#newsletter-container {
+    width: 70%;
+    height: 200px;
+    background-color: #3882F6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+}
+
+#newsletter-text-wrapper {
+    width: 60%;
+    height: 40%;
+}
+
+#newsletter-text-wrapper p{
+    display: inline-block;
+    color: var(--big-colour);
+}
+
+#newsletter-bigger-text {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+#newsletter-smaller-text {
+    font-size: 20px;
+    color: rgb(77, 74, 74);
+}
+
+#newsletter-sign-up {
+    background-color: #3882F6;
+    color: var(--big-colour);
+    font-size: 20px;
+    font-weight: bold;
+    border: 2px solid var(--big-colour);
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    cursor: pointer;
+}
 
 
+/* -----------------------footer--------------------- */
+footer {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--bg);
+}
+
+.footer-wrapper {
+    font-size: 18px;
+}
+
+footer p {
+    color: var(--sec-text-color);
+}
+/* -----------------------media queries--------------------- */
+@media (max-width: 1200px) {
+    #features-container {
+        width: 80%;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #features-section {
+        height: 900px;
+    }
+}
+@media (max-width: 900px) {
+    #features-container {
+        width: 80%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
